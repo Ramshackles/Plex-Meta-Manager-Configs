@@ -50,7 +50,7 @@
 # https://mdblist.com/lists/hdlists/top-ten-pirated-movies-of-the-week-torrent-freak-com/
 
 external_templates:
-  git: PMM/templates
+  repo: PMM/templates
   template_variables:
     collection_section: "01"
 
