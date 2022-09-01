@@ -91,7 +91,8 @@ templates:
     item_sonarr_tag: <<item_sonarr_tag_<<key>>>>
     collection_mode: <<collection_mode>>
     sort_title: "!<<collection_section>><<pre>><<order_<<key>>>><<sort>>"
-    url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-Images/master/chart/<<collection_name_encoded>>.jpg
+    url_poster: https://raw.githubusercontent.com/Ramshackles/Plex-Meta-Manager-Images/tree/master/chart/<<collection_name_encoded>>.jpg
+    # url_poster: https://raw.githubusercontent.com/meisnate12/Plex-Meta-Manager-Images/master/chart/<<collection_name_encoded>>.jpg
 
   other_collection:
     default:

@@ -63,3 +63,4 @@ collections:
       - name: chart_shared
         key: rtlatestfresh
         check_library: movie
+        url_poster: https://github.com/Ramshackles/Plex-Meta-Manager-Images/tree/master/chart/<<collection_name_encoded>>.jpg
