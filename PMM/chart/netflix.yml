@@ -64,7 +64,7 @@ collections:
     allowed_library_types: show
 
   Netflix Movies:
-    mdblist_list: https://mdblist.com/lists/linaspurinis/certified-fresh
+    mdblist_list: https://mdblist.com/lists/ramshackles/netflix-movies-60
     summary: Movies on Netflix with rating above 60, no bollywood or documentary.
     sync_mode: sync
     collection_order: alpha
