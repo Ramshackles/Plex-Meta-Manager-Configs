@@ -60,13 +60,14 @@ collections:
     sync_mode: sync
     collection_order: alpha
     build_collection: false
-    url_poster: https://github.com/meisnate12/Plex-Meta-Manager-Images/blob/master/network/Netflix.jpg
+    url_poster: https://github.com/meisnate12/Plex-Meta-Manager-Images/raw/master/network/Netflix.jpg
+    check_library: show
 
-  # Netflix Movies:
-  #   mdblist_list: https://mdblist.com/lists/linaspurinis/certified-fresh
-  #   summary: Certified Fresh releases from Rotten Tomatoes
-  #   template:
-  #     - name: customsync
-  #     - name: chart_shared
-  #       key: nfmovies
-  #       check_library: movie
+  Netflix Movies:
+    mdblist_list: https://mdblist.com/lists/linaspurinis/certified-fresh
+    summary: Movies on Netflix with rating above 60, no bollywood or documentary.
+    sync_mode: sync
+    collection_order: alpha
+    build_collection: false
+    url_poster: https://github.com/meisnate12/Plex-Meta-Manager-Images/raw/master/network/Netflix.jpg
+    check_library: movie
