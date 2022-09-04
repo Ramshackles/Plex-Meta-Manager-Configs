@@ -61,7 +61,7 @@ collections:
     collection_order: alpha
     build_collection: false
     url_poster: https://github.com/meisnate12/Plex-Meta-Manager-Images/raw/master/network/Netflix.jpg
-    check_library: show
+    allowed_library_types: show
 
   Netflix Movies:
     mdblist_list: https://mdblist.com/lists/linaspurinis/certified-fresh
@@ -70,4 +70,4 @@ collections:
     collection_order: alpha
     build_collection: false
     url_poster: https://github.com/meisnate12/Plex-Meta-Manager-Images/raw/master/network/Netflix.jpg
-    check_library: movie
+    allowed_library_types: movie
