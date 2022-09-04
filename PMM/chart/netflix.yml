@@ -65,6 +65,7 @@ collections:
     sonarr_add_missing: true
     sonarr_tag: anime, pmm_nfanime
     sonarr_folder: /data/media/tv/anime
+    sonarr_series: anime
 
   Netflix Movies:
     mdblist_list: https://mdblist.com/lists/ramshackles/netflix-movies-60
