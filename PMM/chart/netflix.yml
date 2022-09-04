@@ -62,6 +62,8 @@ collections:
     build_collection: false
     url_poster: https://github.com/meisnate12/Plex-Meta-Manager-Images/raw/master/network/Netflix.jpg
     allowed_library_types: show
+    sonarr_add_missing: true
+    sonarr_tag: pmm_nfanime, anime
 
   Netflix Movies:
     mdblist_list: https://mdblist.com/lists/ramshackles/netflix-movies-60
@@ -71,3 +73,5 @@ collections:
     build_collection: false
     url_poster: https://github.com/meisnate12/Plex-Meta-Manager-Images/raw/master/network/Netflix.jpg
     allowed_library_types: movie
+    # radarr_add_missing: true
+    # radarr_tag: pmm_nfmovie
