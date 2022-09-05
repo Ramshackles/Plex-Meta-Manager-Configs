@@ -77,3 +77,14 @@ collections:
     allowed_library_types: movie
     # radarr_add_missing: true
     # radarr_tag: pmm_nfmovie
+
+  Netflix Anime Movies:
+    mdblist_list: https://mdblist.com/lists/ramshackles/netflix-anime-movies-60
+    summary: Anime Movies on Netflix with rating above 60, no bollywood or documentary..
+    sync_mode: sync
+    collection_order: alpha
+    build_collection: false
+    url_poster: https://github.com/meisnate12/Plex-Meta-Manager-Images/raw/master/network/Netflix.jpg
+    allowed_library_types: movie
+    # radarr_add_missing: true
+    # radarr_tag: anime, pmm_nfanimemovie
