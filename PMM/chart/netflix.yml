@@ -71,12 +71,17 @@ collections:
     mdblist_list: https://mdblist.com/lists/ramshackles/netflix-movies-60
     summary: Movies on Netflix with rating above 60, no bollywood or documentary..
     sync_mode: sync
+    sort_title: "!03_Netflix_B"
+    collection_mode: hide
+    visible_library: false
+    visible_home: true
+    visible_shared: true
     collection_order: alpha
-    build_collection: false
+    build_collection: true
     url_poster: https://github.com/meisnate12/Plex-Meta-Manager-Images/raw/master/network/Netflix.jpg
     allowed_library_types: movie
-    # radarr_add_missing: true
-    # radarr_tag: pmm_nfmovie
+    radarr_add_missing: true
+    radarr_tag: pmm_nfmovie
 
   Netflix Anime Movies:
     mdblist_list: https://mdblist.com/lists/ramshackles/netflix-anime-movies-60
