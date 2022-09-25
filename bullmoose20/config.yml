@@ -101,7 +101,7 @@ libraries:                                        # Library mappings must have a
         schedule_easter: daily
         schedule_valentine: daily
         schedule_patrick: daily
-        schedule_thanksgiving: daily
+        schedule_thanksgiving: range(10/01-10/31)
         schedule_halloween: daily
         schedule_christmas: daily
         schedule_years: daily
@@ -114,6 +114,7 @@ libraries:                                        # Library mappings must have a
       # template_variables:
         # style: standard
     - git: PMM/overlays/audio_language
+    - git: PMM/overlays/commonsense
     # - git: PMM/overlays/direct_play
     - git: PMM/overlays/oscars
       template_variables:
@@ -130,6 +131,7 @@ libraries:                                        # Library mappings must have a
     - git: PMM/overlays/commonsense_selection
       template_variables:
         weight: 5
+    - git: PMM/overlays/mediastinger
     - git: PMM/overlays/ratings
       template_variables:
         rating1: user
@@ -166,21 +168,21 @@ libraries:                                        # Library mappings must have a
     - git: PMM/overlays/resolution
     - git: PMM/overlays/special_release
     - git: PMM/overlays/streaming
+    - git: PMM/overlays/versions
     - git: PMM/overlays/video_format
-    - git: PMM/overlays/mediastinger
     settings:
       asset_directory:
       - config/assets
 
     operations:
-      split_duplicates: true
+      split_duplicates: false
       assets_for_all: false
       delete_unmanaged_collections: true
       mass_user_rating_update: mdb_tomatoes
       mass_critic_rating_update: imdb
       mass_audience_rating_update: tmdb
       mass_genre_update: tmdb
-      mass_content_rating_update: omdb
+      mass_content_rating_update: mdb_commonsense
       mass_originally_available_update: tmdb
       mass_imdb_parental_labels: without_none
 
@@ -254,7 +256,14 @@ libraries:                                        # Library mappings must have a
     - git: PMM/overlays/audio_language
       template_variables:
         overlay_level: season
-    # - git: PMM/overlays/direct_play
+    - git: PMM/overlays/commonsense
+    - git: PMM/overlays/commonsense
+      template_variables:
+        overlay_level: episode
+    - git: PMM/overlays/commonsense
+      template_variables:
+        overlay_level: season
+   # - git: PMM/overlays/direct_play
     # - git: PMM/overlays/direct_play
       # template_variables:
         # overlay_level: episode
@@ -305,6 +314,13 @@ libraries:                                        # Library mappings must have a
       template_variables:
         weight: 5
         overlay_level: episode
+    - git: PMM/overlays/mediastinger
+    # - git: PMM/overlays/mediastinger
+      # template_variables:
+        # overlay_level: episode
+    # - git: PMM/overlays/mediastinger
+      # template_variables:
+        # overlay_level: season
     - git: PMM/overlays/ratings
       template_variables:
         rating1: user
@@ -369,18 +385,21 @@ libraries:                                        # Library mappings must have a
     - git: PMM/overlays/streaming
       template_variables:
         overlay_level: season
-    - git: PMM/overlays/video_format
-    - git: PMM/overlays/video_format
+    - git: PMM/overlays/versions
+    - git: PMM/overlays/versions
       template_variables:
         overlay_level: episode
-    - git: PMM/overlays/video_format
+    - git: PMM/overlays/versions
       template_variables:
         overlay_level: season
-    - git: PMM/overlays/mediastinger
-    - git: PMM/overlays/mediastinger
+    - git: PMM/overlays/versions
+      template_variables:
+        overlay_level: show
+    - git: PMM/overlays/video_format
+    - git: PMM/overlays/video_format
       template_variables:
         overlay_level: episode
-    - git: PMM/overlays/mediastinger
+    - git: PMM/overlays/video_format
       template_variables:
         overlay_level: season
     settings:
@@ -388,7 +407,7 @@ libraries:                                        # Library mappings must have a
       - config/assets
 
     operations:
-      split_duplicates: true
+      split_duplicates: false
       assets_for_all: false
       delete_unmanaged_collections: true
       mass_critic_rating_update: imdb
@@ -397,7 +416,7 @@ libraries:                                        # Library mappings must have a
       mass_episode_critic_rating_update: imdb
       mass_episode_audience_rating_update: tmdb
       mass_genre_update: tmdb
-      mass_content_rating_update: omdb
+      mass_content_rating_update: mdb_commonsense
       mass_originally_available_update: tmdb
       mass_imdb_parental_labels: without_none
 playlist_files:
@@ -526,3 +545,4 @@ mal:
     expires_in: 2678400
     refresh_token: (redacted)
   localhost_url:
+  cache_expiration: 60
