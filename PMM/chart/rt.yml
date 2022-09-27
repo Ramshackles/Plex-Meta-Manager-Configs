@@ -48,26 +48,58 @@
 #          item_sonarr_tag_key:                             #
 #############################################################
 
-external_templates:
-  repo: PMM/templates
-  template_variables:
-    collection_section: "01"
+# external_templates:
+#   repo: PMM/templates
+#   template_variables:
+#     collection_section: "01"
 
 collections:
+#   RT Latest Certified Fresh:
+#     mdblist_list: https://mdblist.com/lists/linaspurinis/latest-certified-fresh-releases
+#     summary: Latest Certified Fresh releases from Rotten Tomatoes
+#     template:
+#       - name: customsync
+#       - name: chart_shared
+#         key: rtlatestfresh
+#         check_library: movie
+
+  # RT Certified Fresh:
+  #   mdblist_list: https://mdblist.com/lists/linaspurinis/certified-fresh
+  #   summary: Certified Fresh releases from Rotten Tomatoes
+  #   template:
+  #     - name: customsync
+  #     - name: chart_shared
+  #       key: rtfresh
+  #       check_library: movie
+
   RT Latest Certified Fresh:
     mdblist_list: https://mdblist.com/lists/linaspurinis/latest-certified-fresh-releases
     summary: Latest Certified Fresh releases from Rotten Tomatoes
-    template:
-      - name: customsync
-      - name: chart_shared
-        key: rtlatestfresh
-        check_library: movie
+    sync_mode: sync
+    sort_title: "!01_RT Latest Certified Fresh"
+    collection_mode: hide
+    visible_library: false
+    visible_home: true
+    visible_shared: true
+    collection_order: alpha
+    build_collection: true
+    url_poster: https://github.com/Ramshackles/Plex-Meta-Manager-Images/raw/master/chart/RT%20Latest%20Certified%20Fresh.jpg
+    allowed_library_types: movie
+    radarr_add_missing: true
+    radarr_tag: pmm_rtlatestfresh
 
   RT Certified Fresh:
     mdblist_list: https://mdblist.com/lists/linaspurinis/certified-fresh
     summary: Certified Fresh releases from Rotten Tomatoes
-    template:
-      - name: customsync
-      - name: chart_shared
-        key: rtfresh
-        check_library: movie
+    sync_mode: sync
+    sort_title: "!01_RT Certified Fresh"
+    collection_mode: hide
+    visible_library: false
+    visible_home: true
+    visible_shared: true
+    collection_order: alpha
+    build_collection: true
+    url_poster: https://github.com/Ramshackles/Plex-Meta-Manager-Images/raw/master/chart/RT%20Certified%20Fresh.jpg
+    allowed_library_types: movie
+    # radarr_add_missing: true
+    # radarr_tag: pmm_nfmovie
